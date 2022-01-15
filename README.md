@@ -1,6 +1,6 @@
 ## Cortex Analyzer Template
-[![Docker Image CI](https://github.com/adammchugh/Cortex_Analyzer_Template/actions/workflows/docker-image.yml/badge.svg?branch=development)](https://github.com/adammchugh/Cortex_Analyzer_Template/actions/workflows/docker-image.yml)
-[![CodeQL](https://github.com/adammchugh/Cortex_Analyzer_Template/actions/workflows/codeql-analysis.yml/badge.svg?branch=development)](https://github.com/adammchugh/Cortex_Analyzer_Template/actions/workflows/codeql-analysis.yml)
+[![Docker Image CI](https://github.com/adammchugh/Cortex-Defender_Quarantine/actions/workflows/docker-image.yml/badge.svg)](https://github.com/adammchugh/Cortex-Defender_Quarantine/actions/workflows/docker-image.yml)
+[![CodeQL](https://github.com/adammchugh/Cortex-Defender_Quarantine/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/adammchugh/Cortex-Defender_Quarantine/actions/workflows/codeql-analysis.yml)
 
 ### Usage
 
@@ -12,17 +12,18 @@ $ cat tests/input/input.json | jq
   "config": {
     "check_pap": true,
     "check_tlp": true,
-    "delay": 10,
+    "delay": 1,
     "max_pap": 2,
     "max_tlp": 2
   },
-  "data": "8.8.8.8",
-  "dataType": "ip",
+  "dataType": "file",
+  "file": "attachment1234123412341234123",
+  "filename": "7BEBE68E570E8351D6CB28856613934A7FDD2510",
   "pap": 1,
   "tlp:": 1
 }
 
-$ python template.py tests
+$ python DefenderQuarantine.py tests
 
 $ cat tests/output/output.json | jq
 {
@@ -32,37 +33,30 @@ $ cat tests/output/output.json | jq
       {
         "level": "info",
         "namespace": "template",
-        "predicate": "ip",
-        "value": "8.8.8.8"
+        "predicate": "file",
+        "value": "7BEBE68E570E8351D6CB28856613934A7FDD2510"
       }
     ]
   },
   "artifacts": [
-    {
-      "tags": [
-        "template"
-      ],
-      "tlp": 2,
-      "dataType": "ip",
-      "data": "8.8.8.8"
-    }
+    null
   ],
   "full": {
-    "data": "8.8.8.8",
+    "data": "7BEBE68E570E8351D6CB28856613934A7FDD2510",
     "input": {
       "config": {
         "check_pap": true,
         "check_tlp": true,
-        "delay": 0,
+        "delay": 1,
         "max_pap": 2,
         "max_tlp": 2
       },
-      "data": "8.8.8.8",
-      "dataType": "ip",
+      "dataType": "file",
+      "file": "attachment1234123412341234123",
+      "filename": "7BEBE68E570E8351D6CB28856613934A7FDD2510",
       "pap": 1,
       "tlp:": 1
     }
   }
 }
 ```
-aa

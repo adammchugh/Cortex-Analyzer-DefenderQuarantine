@@ -1,4 +1,4 @@
-## Cortex Analyzer Template
+## Cortex Analyzer - Decrypt Windows Quarantined File
 [![Docker Image CI](https://github.com/adammchugh/Cortex-Defender_Quarantine/actions/workflows/docker-image.yml/badge.svg)](https://github.com/adammchugh/Cortex-Defender_Quarantine/actions/workflows/docker-image.yml)
 [![CodeQL](https://github.com/adammchugh/Cortex-Defender_Quarantine/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/adammchugh/Cortex-Defender_Quarantine/actions/workflows/codeql-analysis.yml)
 

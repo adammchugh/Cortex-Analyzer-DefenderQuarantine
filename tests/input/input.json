@@ -1,1 +1,14 @@
-{"config": {"check_pap": true, "check_tlp": true, "delay": 1, "max_pap": 2, "max_tlp": 2}, "data": "8.8.8.8", "dataType": "ip", "pap": 1, "tlp:": 1}
+{
+  "config": {
+    "check_pap": true,
+    "check_tlp": true,
+    "delay": 1,
+    "max_pap": 2,
+    "max_tlp": 2
+  },
+  "dataType": "file",
+  "file": "attachment1234123412341234123",
+  "filename": "7BEBE68E570E8351D6CB28856613934A7FDD2510",
+  "pap": 1,
+  "tlp:": 1
+}

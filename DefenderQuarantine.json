@@ -1,0 +1,26 @@
+{
+  "author": "McHughSecurity",
+  "baseConfig": "DefenderQuarantine",
+  "command": "DefenderQuarantine/DefenderQuarantine.py",
+  "config": {
+    "service": "get"
+  },
+  "configurationItems": [
+    {
+      "defaultValue": 10,
+      "description": "Sleeping time before analysis (in seconds)",
+      "multi": false,
+      "name": "delay",
+      "required": false,
+      "type": "number"
+    }
+  ],
+  "dataTypeList": [
+    "file"
+  ],
+  "description": "Decrypt Windows Defender Quarantined Files",
+  "license": "MIT",
+  "name": "DefenderQuarantine",
+  "url": "https://github.com/adammchugh/Cortex-Defender_Quarantine",
+  "version": "0.0.1"
+}

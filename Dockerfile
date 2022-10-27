@@ -1,4 +1,4 @@
-FROM python:3.9-alpine3.15
+FROM python:3.12.0a1-alpine3.15
 LABEL maintainer=adam.mchugh@mchughsecurity.com
 
 WORKDIR /analyzer
